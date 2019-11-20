@@ -31,7 +31,7 @@ export default class Welcome extends React.Component {
 
   render() {
     return (
-      <View style={this.styles.wrapper}>
+      <View testID="storybook.demo.stories.welcome" style={this.styles.wrapper}>
         <Text style={this.styles.header}>Welcome to React Native Storybook</Text>
         <Text style={this.styles.content}>
           This is a UI Component development environment for your React Native app. Here you can

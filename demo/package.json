@@ -28,12 +28,27 @@
     "@storybook/addons": "5.3.0-beta.0",
     "@storybook/react-native": "5.3.0-beta.0",
     "babel-jest": "^24.9.0",
+    "detox": "^14.8.1",
     "eslint": "^6.6.0",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.57.0",
+    "mocha": "^6.2.2",
     "react-test-renderer": "16.9.0"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/demo/Build/Products/Debug-iphonesimulator/demo.app",
+        "build": "xcodebuild -workspace ios/demo.xcworkspace -scheme demo -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 11 Pro"
+        }
+      }
+    },
+    "test-runner": "mocha"
   }
 }
